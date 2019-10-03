@@ -76,12 +76,12 @@
 		</dependency>
 	</dependencies>
 	
-	<distributionManagement>
-          <snapshotRepository>
-          <id>nexus</id>
-          <url>http://13.233.173.245:8081/nexus/content/repositories/snapshots/</url>
-          </snapshotRepository>
-       </distributionManagement>
+<distributionManagement>
+  <snapshotRepository>
+    <id>snapshots</id>
+    <url>http://13.235.94.44:8081/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
+</distributionManagement>
 
 	<build>
 		<plugins>
