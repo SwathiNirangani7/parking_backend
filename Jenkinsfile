@@ -4,7 +4,14 @@ node('master'){
 	                  git 'https://github.com/Palanimks/GeneralSpringBootProgExce.git'
 	              }
 
+  stage('sonar')
 
+{
+withSonarQubeEnv('sonar')
+{
+sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin123 -Dsonar.login=admin'
+} // SonarQube taskId is automatically attached to the pipeline context
+}
 	   stage('Build approval') 
         {
                           input "Build the app?"
@@ -18,7 +25,7 @@ node('master'){
                           input "Deploy the app?"
         }
 	            stage('Deploy'){
-             sh '/opt/maven/bin/mvn deploy'
+              sh '/opt/maven/bin/mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://admin:admin123@18.223.44.213:8081/nexus/content/repositories/snapshots/''
          }
 	
 	stage('Running java backend application'){
