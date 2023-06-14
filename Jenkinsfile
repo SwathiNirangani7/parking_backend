@@ -35,4 +35,4 @@ sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin -Dsonar.l
 	}
 	}
 }
-}
+
