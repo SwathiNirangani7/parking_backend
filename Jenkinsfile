@@ -18,14 +18,14 @@ sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin123 -Dsona
         }
 	 
 	   stage('Build'){
-	             sh '/opt/maven/bin/mvn clean install'
+	             sh '/usr/share/maven mvn clean install'
 	         }
 	         	   stage('Deployment approval') 
         {
                           input "Deploy the app?"
         }
 	            stage('Deploy'){
-              sh '/opt/maven/bin/mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://admin:admin123@18.223.44.213:8081/nexus/content/repositories/snapshots/''
+              sh '/usr/share/maven mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://admin:admin123@18.223.44.213:8081/nexus/content/repositories/snapshots/''
          }
 	
 	stage('Running java backend application'){
