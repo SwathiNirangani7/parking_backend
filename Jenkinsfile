@@ -25,7 +25,7 @@ sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin -Dsonar.l
                           input "Deploy the app?"
         }
 	            stage('Deploy'){
-              sh '/opt/maven/bin/mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://admin:admin@3.104.120.155:8081/nexus/content/repositories/snapshots/''
+              sh '/opt/maven/bin/mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://admin:admin123@3.104.120.155:8081/nexus/content/repositories/snapshots/''
          }
 	
 	stage('Running java backend application'){
