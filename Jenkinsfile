@@ -6,11 +6,6 @@ node{
   stage('sonar')
 
 {
-withSonarQubeEnv('sonar')
-{
-sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin123 -Dsonar.login=admin'
-} 
-}// SonarQube taskId is automatically attached to the pipeline context
 
 	   stage('Build approval') 
         {
@@ -31,7 +26,7 @@ sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin123 -Dsona
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
 	}
    }
-
+}
 	
 
 
