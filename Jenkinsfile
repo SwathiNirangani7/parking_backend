@@ -6,7 +6,11 @@ node{
   stage('sonar')
 
 {
-
+withSonarQubeEnv('sonar')
+{
+sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin123 -Dsonar.login=admin'
+} 
+}// SonarQube taskId is automatically attached to the pipeline context
 
 	   stage('Build approval') 
         {
@@ -14,7 +18,7 @@ node{
         }
 	 
 	   stage('Build'){
-	             sh '/opt/maven/bin/mvn clean install'
+	             sh '/usr/share/mvn clean install'
 	         }
 	         	   stage('Deployment approval') 
         {
