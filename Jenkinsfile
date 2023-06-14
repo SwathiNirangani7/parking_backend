@@ -6,11 +6,8 @@ node{
   stage('sonar')
 
 {
-withSonarQubeEnv('sonarqube')
-{
-sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin -Dsonar.login=admin'
-} // SonarQube taskId is automatically attached to the pipeline context
-}
+
+
 	   stage('Build approval') 
         {
                           input "Build the app?"
@@ -30,7 +27,7 @@ sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin -Dsonar.l
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
 	}
    }
-
+}
 	
 
 
