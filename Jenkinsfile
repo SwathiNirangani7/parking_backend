@@ -1,4 +1,7 @@
-node('master'){
+pipeline {
+   agent any
+
+   stages {
 	   
 	   stage('Git checkout'){
 	                  git 'https://github.com/Palanimks/GeneralSpringBootProgExce.git'
@@ -31,3 +34,5 @@ sh '/opt/maven/bin/mvn clean verify sonar:sonar -Dsonar.password=admin -Dsonar.l
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
 	}
 	}
+}
+}
