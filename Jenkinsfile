@@ -4,12 +4,7 @@ node{
 	              }
 
   stage('sonar')
-
-{
-	mvn sonar:sonar 
-	    
-}
-
+	{
 	   stage('Build approval') 
         {
                           input "Build the app?"
@@ -29,6 +24,7 @@ node{
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
 	}
    }
+}
 	
 
 
