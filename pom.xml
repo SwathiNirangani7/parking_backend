@@ -14,7 +14,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>parking</name>
 	<description>Demo project for Spring Boot</description>
-
+ <properties>
+                  <altDeploymentRepository>admin::admin123::http://3.26.181.231:8081/nexus/repository/maven-snapshots/</altDeploymentRepository>
+                  <!--altReleaseDeploymentRepository>local-nexus::default::http://nexus/repository/maven-releases/</altReleaseDeploymentRepository-->
+                  <!--altSnapshotDeploymentRepository>local-nexus::default::http://nexus/repository/maven-snapshots/</altSnapshotDeploymentRepository-->
+              </properties>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
