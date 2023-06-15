@@ -6,6 +6,11 @@ node{
   stage('sonar')
 
 {
+	mvn sonar:sonar \
+  -Dsonar.projectKey=mvn_project \
+  -Dsonar.host.url=http://3.26.181.231:9000 \
+  -Dsonar.login=5915cd7bb5a6b9d5b94daa1a2d2cf79097e32404
+}
 
 	   stage('Build approval') 
         {
