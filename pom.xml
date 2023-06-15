@@ -75,7 +75,11 @@
 			<version>7.41.2</version>
 		</dependency>
 	</dependencies>
-	
+	<server>
+  <id>nexus</id>
+  <username>admin</username>
+  <password>admin123</password>
+</server>
 	<distributionManagement>
   <snapshotRepository>
     <id>nexus</id>
