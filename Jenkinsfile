@@ -5,9 +5,7 @@ node{
 
   stage('sonar')
 	{
-		 {
 				sh 'mvn clean verify sonar:sonar -Dmaven.test.skip=true'
-			}
 		}
 	   stage('Build approval') 
         {
