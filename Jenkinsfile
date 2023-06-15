@@ -26,7 +26,7 @@ node{
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
 	}
    }
-}
+
 	
 
 
