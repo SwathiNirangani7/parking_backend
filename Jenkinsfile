@@ -20,7 +20,7 @@ node{
                           input "Deploy the app?"
         }
 	            stage('Deploy'){
-              sh "mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://13.238.217.94:8081/repository/maven-snapshots/com/hcl/vamsi/GeneralProgExec/0.0.1-SNAPSHOT"
+              sh "mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://3.27.77.180:8081/repository/maven-snapshots/com/hcl/vamsi/GeneralProgExec/0.0.1-SNAPSHOT"
          }
 	stage('Running java backend application'){
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
