@@ -90,7 +90,7 @@
 	<distributionManagement>
 	   <snapshotRepository>
              <id>nexus</id>               
-               <url>http://13.238.217.94:8081/repository/maven-snapshots</url>
+               <url>http://13.238.217.94:8081/repository/maven-snapshots/com/hcl/vamsi</url>
            </snapshotRepository>
 	</distributionManagement>
 
