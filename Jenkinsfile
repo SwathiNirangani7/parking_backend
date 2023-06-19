@@ -20,7 +20,7 @@ node{
                           input "Deploy the app?"
         }
 	            stage('Deploy'){
-              sh "mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://13.239.20.140:8081/nexus/content/repositories/snapshots/"
+              sh "mvn clean deploy -DaltDeploymentRepository=internal.repo::default::http://3.26.113.20:8081/nexus/content/repositories/snapshots/"
          }
 	stage('Running java backend application'){
 	sh 'export JENKINS_NODE_COOKIE=dontKillMe ;nohup java -Dspring.profiles.active=uat -jar $WORKSPACE/target/*.jar &'
