@@ -87,7 +87,6 @@
 	</distributionManagement>
 
 	<build>
-		<build>
 			<plugin>
                     <groupId>maven</groupId>
                     <artifactId>gitflow-helper-maven-plugin</artifactId>
