@@ -90,6 +90,7 @@
                <url>http://3.27.106.34:8081/repository/maven-snapshots/</url>
            </snapshotRepository>
 	</distributionManagement>
+</project>
   <build>
 	<plugins>
     <plugin>
@@ -113,4 +114,4 @@
       </executions>
     </plugin>	
 	</plugins>
-</project>
+
