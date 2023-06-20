@@ -86,7 +86,7 @@
            </snapshotRepository>
 	</distributionManagement>
 
-	<build>
+	
                     <groupId>maven</groupId>
                     <artifactId>gitflow-helper-maven-plugin</artifactId>
                     <version>1.4.0</version>
