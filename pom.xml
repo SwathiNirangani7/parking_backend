@@ -77,17 +77,7 @@
 			<artifactId>twilio</artifactId>
 			<version>7.41.2</version>
 		</dependency>
-	</dependencies>
-
-	<distributionManagement>
-	   <snapshotRepository>
-             <id>nexus</id>               
-               <url>http://3.27.106.34:8081/repository/maven-snapshots/</url>
-           </snapshotRepository>
-	</distributionManagement>
-
-	
-                    <groupId>maven</groupId>
+		  <groupId>maven</groupId>
                     <artifactId>gitflow-helper-maven-plugin</artifactId>
                     <version>1.4.0</version>
                     <configuration>
@@ -106,7 +96,14 @@
                             </goals>
                         </execution>
                 </executions>
+	</dependencies>
 
+	<distributionManagement>
+	   <snapshotRepository>
+             <id>nexus</id>               
+               <url>http://3.27.106.34:8081/repository/maven-snapshots/</url>
+           </snapshotRepository>
+	</distributionManagement>
   <plugins>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
