@@ -20,7 +20,6 @@
            <sonar.login>admin</sonar.login>
            <sonar.password>admin</sonar.password>
         </properties>
-	
 
 	<dependencies>
 		<dependency>
@@ -93,6 +92,17 @@
 
   <build>
 	<plugins>
+		 <plugin>
+                <groupId>br.com.softplan.security.zap</groupId>
+                <artifactId>zap-maven-plugin</artifactId>
+                <version>1.2.1-0</version>
+                <configuration>
+                    <!-- If ZAP is running on localhost, there is no need to define zapHost -->
+                    <zapHost>http://34.86.51.193</zapHost>
+                    <zapPort>8080</zapPort>
+                    <targetUrl>http://34.69.103.139:8098/rest/demo</targetUrl>
+                </configuration>
+            </plugin>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-deploy-plugin</artifactId>
