@@ -81,16 +81,6 @@
 		  <groupId>maven</groupId>
                     <artifactId>gitflow-helper-maven-plugin</artifactId>
                     <version>1.4.0</version>
-                <executions>
-                        <execution>
-                            <goals>
-                                    <goal>enforce-versions</goal>
-                                    <goal>retarget-deploy</goal>
-                                    <goal>tag-master</goal>
-                                    <goal>promote-master</goal>
-                            </goals>
-                        </execution>
-                </executions>
 		</dependency>
 		</dependencies>
 
