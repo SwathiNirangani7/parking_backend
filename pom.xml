@@ -90,7 +90,8 @@
                <url>http://3.27.106.34:8081/repository/maven-snapshots/</url>
            </snapshotRepository>
 	</distributionManagement>
-  <plugins>
+  <build>
+	<plugins>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-deploy-plugin</artifactId>
