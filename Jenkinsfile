@@ -20,7 +20,7 @@ node{
                           input "Deploy the app?"
         }
 	            stage('Deploy'){
-	      sh "mvn clean deploy -DaltDeploymentRepository=releaseRspository::default::http://admin:admin123@3.27.77.180:8081/repository/maven-snapshots"
+	      sh "mvn clean deploy -DaltDeploymentRepository=releaseRspository::default::http://admin:admin123@3.27.106.34:8081/repository/maven-snapshots"
    
          }
 	stage('Running java backend application'){
