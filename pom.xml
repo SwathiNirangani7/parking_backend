@@ -79,11 +79,11 @@
 		<repository>
         <id>central</id>
         <name>plugins-releases</name>
-        <url>http://3.27.106.34:8081/repository/maven-releases</url>
+        <url>http://13.239.122.159:8081/repository/maven-releases</url>
     </repository>
   <snapshotRepository>
     <id>nexus</id>
-    <url>http://3.27.106.34:8081/repository/maven-snapshots</url>
+    <url>http://13.239.122.159:8081/repository/maven-snapshots</url>
   </snapshotRepository>
 </distributionManagement>
 
