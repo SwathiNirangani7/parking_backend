@@ -111,7 +111,7 @@
           </goals>
         </execution>
       </executions>
-		
+    </build>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -137,7 +137,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
         <profiles>
     <profile>
         <id>dev</id>
