@@ -86,11 +86,11 @@
 		<repository>
         <id>central</id>
         <name>plugins-releases</name>
-        <url>http://13.239.122.159:8081/repository/maven-releases</url>
+        <url>http://54.206.81.224:8081/repository/maven-releases</url>
     </repository>
   <snapshotRepository>
     <id>nexus</id>
-    <url>http://13.239.122.159:8081/repository/maven-snapshots</url>
+    <url>http://54.206.81.224:8081/repository/maven-snapshots</url>
   </snapshotRepository>
 </distributionManagement>
 
