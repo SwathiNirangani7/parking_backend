@@ -83,15 +83,10 @@
 	</dependencies>
 	
 	<distributionManagement>
-		<repository>
-        <id>central</id>
-        <name>plugins-releases</name>
-        <url>http://54.206.81.224:8081/repository/maven-releases</url>
-    </repository>
-  <snapshotRepository>
-    <id>nexus</id>
-    <url>http://54.206.81.224:8081/repository/maven-snapshots</url>
-  </snapshotRepository>
+	<snapshotRepository>
+<id>nexusid</id>               
+<url>http://13.211.170.48:8081/repository/maven-releases</url>
+</snapshotRepository>
 </distributionManagement>
 
 	<build>
